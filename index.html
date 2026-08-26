@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>חידון המוזיקה</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="lang-toggle" class="lang-toggle" type="button">EN</button>
+<header id="global-scoreboard" class="global-scoreboard"></header>
+
+<!-- ===================== SETUP SCREEN ===================== -->
+<section id="screen-setup" class="screen active">
+  <div class="setup-card">
+    <p id="setup-eyebrow" class="eyebrow"></p>
+    <h1 id="setup-title"></h1>
+    <p id="setup-tagline" class="tagline"></p>
+
+    <div id="resume-banner" class="resume-banner" style="display:none;">
+      <p id="resume-banner-text"></p>
+      <button id="btn-resume" class="btn btn-secondary" type="button"></button>
+    </div>
+
+    <h2 id="genre-heading" class="setup-h2"></h2>
+    <div id="genre-options" class="genre-options"></div>
+
+    <h2 id="setup-teams-heading" class="setup-h2"></h2>
+    <div id="team-list" class="team-list"></div>
+    <button id="btn-add-team" class="btn btn-ghost" type="button"></button>
+
+    <button id="btn-start-game" class="btn btn-primary btn-large" type="button"></button>
+    <p id="setup-hint" class="setup-hint"></p>
+  </div>
+</section>
+
+<!-- ===================== BOARD SCREEN ===================== -->
+<section id="screen-board" class="screen">
+  <header class="topbar">
+    <h2 id="round-title" class="round-title"></h2>
+  </header>
+  <div id="board-grid" class="board-grid"></div>
+  <button id="btn-end-round" class="btn btn-secondary btn-floating" type="button"></button>
+</section>
+
+<!-- ===================== QUESTION SCREEN ===================== -->
+<section id="screen-question" class="screen">
+  <div class="question-wrap">
+    <div class="question-meta">
+      <span id="q-category" class="tag"></span>
+      <span id="q-points" class="tag tag-points"></span>
+    </div>
+    <p id="q-prompt" class="question-prompt"></p>
+
+    <div id="q-audio-wrap" class="audio-wrap">
+      <audio id="q-audio" controls preload="auto"></audio>
+    </div>
+
+    <div id="q-image-wrap" class="image-wrap">
+      <img id="q-image" alt="">
+    </div>
+
+    <div id="q-options" class="options-grid"></div>
+
+    <div class="timer-row">
+      <span id="timer-display" class="timer-display">30</span>
+      <button id="btn-timer" class="btn btn-ghost" type="button"></button>
+    </div>
+
+    <button id="btn-reveal" class="btn btn-primary btn-large" type="button"></button>
+  </div>
+</section>
+
+<!-- ===================== REVEAL SCREEN ===================== -->
+<section id="screen-reveal" class="screen">
+  <div class="question-wrap">
+    <div class="question-meta">
+      <span id="r-category" class="tag"></span>
+      <span id="r-points" class="tag tag-points"></span>
+    </div>
+    <p id="r-prompt" class="question-prompt"></p>
+
+    <div id="r-image-wrap" class="image-wrap">
+      <img id="r-image" alt="">
+    </div>
+
+    <div id="r-options" class="options-grid"></div>
+
+    <div class="fact-box">
+      <p id="r-fact-label" class="fact-label"></p>
+      <p id="r-fact"></p>
+    </div>
+
+    <h3 id="award-title" class="award-title"></h3>
+    <div id="award-buttons" class="award-buttons"></div>
+
+    <button id="btn-back-to-board" class="btn btn-secondary btn-large" type="button"></button>
+  </div>
+</section>
+
+<!-- ===================== FINAL ENCORE: WAGER SCREEN ===================== -->
+<section id="screen-wager" class="screen">
+  <div class="question-wrap">
+    <p id="wager-eyebrow" class="eyebrow"></p>
+    <h2 id="wager-heading"></h2>
+    <p id="wager-tagline" class="tagline"></p>
+    <div id="wager-list" class="wager-list"></div>
+    <button id="btn-lock-wagers" class="btn btn-primary btn-large" type="button"></button>
+  </div>
+</section>
+
+<!-- ===================== FINAL ENCORE: QUESTION SCREEN ===================== -->
+<section id="screen-encore-question" class="screen">
+  <div class="question-wrap">
+    <p id="encore-q-eyebrow" class="eyebrow"></p>
+    <p id="e-prompt" class="question-prompt"></p>
+    <div id="e-options" class="options-grid"></div>
+    <button id="btn-encore-reveal" class="btn btn-primary btn-large" type="button"></button>
+  </div>
+</section>
+
+<!-- ===================== FINAL ENCORE: RESOLVE SCREEN ===================== -->
+<section id="screen-encore-resolve" class="screen">
+  <div class="question-wrap">
+    <p id="e-prompt2" class="question-prompt"></p>
+    <div id="e-options2" class="options-grid"></div>
+    <div class="fact-box">
+      <p id="e-fact-label" class="fact-label"></p>
+      <p id="e-fact"></p>
+    </div>
+    <h3 id="mark-wagers-title" class="award-title"></h3>
+    <div id="encore-resolve-list" class="wager-list"></div>
+    <button id="btn-show-podium" class="btn btn-primary btn-large" type="button"></button>
+  </div>
+</section>
+
+<!-- ===================== END / PODIUM SCREEN ===================== -->
+<section id="screen-end" class="screen">
+  <div class="end-wrap">
+    <p id="end-eyebrow" class="eyebrow"></p>
+    <h1 id="end-heading"></h1>
+    <div id="podium" class="podium"></div>
+    <button id="btn-new-game" class="btn btn-secondary btn-large" type="button"></button>
+  </div>
+</section>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
