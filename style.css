@@ -141,9 +141,11 @@ body.in-game .global-scoreboard { display: flex; }
   align-items: center;
   justify-content: space-between;
   gap: 14px;
+  flex-wrap: wrap;
   text-align: start;
 }
 .resume-banner p { margin: 0; color: var(--cream); font-size: 15px; }
+.resume-banner-actions { display: flex; gap: 10px; flex: 0 0 auto; }
 .setup-h2 { font-size: 18px; color: var(--cream); text-align: start; }
 .setup-hint { color: var(--muted); font-size: 13px; margin-top: 14px; }
 

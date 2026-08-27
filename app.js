@@ -63,7 +63,7 @@
     [
       "lang-toggle",
       "genre-heading", "genre-options",
-      "team-list", "btn-add-team", "btn-start-game", "resume-banner", "resume-banner-text", "btn-resume",
+      "team-list", "btn-add-team", "btn-start-game", "resume-banner", "resume-banner-text", "btn-resume", "btn-cancel-game",
       "setup-eyebrow", "setup-title", "setup-tagline", "setup-teams-heading", "setup-hint",
       "round-title", "board-grid", "btn-end-round",
       "q-category", "q-points", "q-prompt", "q-audio-wrap", "q-audio", "q-image-wrap", "q-image", "q-options",
@@ -87,6 +87,7 @@
     els.btnAddTeam.addEventListener("click", addTeam);
     els.btnStartGame.addEventListener("click", startGame);
     els.btnResume.addEventListener("click", resumeGame);
+    els.btnCancelGame.addEventListener("click", newGame);
     els.btnEndRound.addEventListener("click", endRound);
     els.btnTimer.addEventListener("click", toggleTimer);
     els.btnReveal.addEventListener("click", revealAnswer);
@@ -144,6 +145,7 @@
     els.setupTagline.textContent = strs.setupTagline;
     els.resumeBannerText.textContent = strs.resumeBannerText;
     els.btnResume.textContent = strs.resumeGame;
+    els.btnCancelGame.textContent = strs.cancelGame;
     els.genreHeading.textContent = strs.chooseGenres;
     els.setupTeamsHeading.textContent = strs.teamsHeading;
     els.btnAddTeam.textContent = strs.addTeam;
